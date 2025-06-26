@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticate Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .main {
+            background-image: url('https://e-certificates.bureauveritas.com/img/background-v3/background_industry.jpg'); /* Placeholder: Please replace with the actual image URL or local path */
+            background-size: cover;
+            background-position: bottom right;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .header-bg {
+            background-color: #00049E; /* Dark blue color from the image */
+        }
+        .card-gradient-top {
+    background: linear-gradient(to  left,   rgb(61, 58, 58),rgb(133, 131, 131) ); /* Gradient from bottom-left to top-right */
+}
+
+        .speech-bubble-tail {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 50px 50px; /* Adjust size as needed */
+            border-color: transparent transparent #f0f0f0 transparent; /* Match card background */
+            transform: rotate(0deg); /* No rotation needed for this method */
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1)); /* Add shadow */
+        }
+        .fingerprint-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent; /* Ensure transparent background */
+            padding: 0; /* Remove padding to let the image fill naturally */
+        }
+        /* .fingerprint-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; Ensure image scales correctly
+        } */
+        .check-icon {
+            width: 40px;
+            height: 40px;
+            /* background-color: #4CAF50; Green checkmark background */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .check-icon svg {
+            fill: white;
+        }
+        .speech-bubble-tail {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 50px 50px; /* Adjusted size to be smaller */
+            border-color: transparent transparent #f0f0f0 transparent; /* Match card background color */
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1)); /* Adjusted shadow direction to match the image */
+        }
+        span{
+            font-size: 12px
+        }
+        @media screen and (max-width: 400px) {
+            .fingerprint-icon {
+                width: 50px;
+                height: 50px;
+            }
+            .main{
+                background-size: cover;
+                background-position: right bottom ;
+            }
+            .check-icon {
+                width: 30px;
+                height: 30px;
+            }
+            .speech-bubble-tail {
+                border-width: 0 0 40px 40px; /* Adjusted size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="header-bg text-white md:py-6 py-5 px-4 z-50 fixed  w-full md:px-8 lg:px-16 flex items-center">
+        <div class="fingerprint-icon mr-4">
+            <!-- Placeholder for actual fingerprint SVG/image -->
+            <img  src="https://e-certificates.bureauveritas.com/img/fingerprint.png" class="md:size-auto w-[48px] h-[68px]"/>
+        </div>
+        <div>
+            <h1 class="text-[1em] md:text-3xl font-bold">Authenticate your document</h1>
+           <div >
+
+               <p class=" text-xs mt-1">Thank you for submitting your document for verification.</p>
+               <p class="text-xs">Please find below the answer to your request.</p>
+           </div>
+        </div>
+    </header>
+
+    <!-- Main Content Card -->
+     <div class="main ">
+
+         <main class="flex-grow  flex items-center justify-center p-0 md:mt-32 mt-28 lg:pt-4 md:p-8">
+             <div class="  shadow-lg overflow-hidden w-full my-4 sticky top-10  md:max-w-2xl lg:max-w-4xl  relative z-10">
+                 <!-- Top Gradient Section with Checkmark -->
+                 <div class="card-gradient-top h-20 rounded-t-full flex items-center justify-center relative">
+                     <div class="check-icon">
+                         <img src="https://e-certificates.bureauveritas.com/img/circle_success.png"  />
+                     </div>
+                 </div>
+     
+                 <!-- Document Details Section -->
+                 <div class="px-6 md:px-8 md:py-4 py-7  bg-white">
+                    <div class="">
+
+                        <div class="grid grid-cols-1 text-[12px]   gap-x-8 gap-y-1 text-sm">
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">Deliverable Id :</span>
+                                <span>148-2025-034696-EN</span>
+                            </div>
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">Published on :</span>
+                                <span>12/05/2025</span>
+                            </div>
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">QR Code Status :</span>
+                                <span>Validated</span>
+                            </div>
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">NAME :</span>
+                                <span>SAFEER ULLAH KHAN LATIF</span>
+                            </div>
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">ID :</span>
+                                <span>2258303243</span>
+                            </div>
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">ISSUED ON :</span>
+                                <span>12/05/2025</span>
+                            </div>
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">VALID UNTIL :</span>
+                                <span>11/05/2026</span>
+                            </div>
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">TYPE :</span>
+                                <span>SCAFFOLDING ERECTOR AND DISMANTLER</span>
+                            </div>
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">MODEL :</span>
+                                <span>N/A</span>
+                            </div>
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">COMPANY :</span>
+                                <span>PRIVATE</span>
+                            </div>
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">TRAINING LOCATION :</span>
+                                <span>JUBAIL</span>
+                            </div>
+                            <div class="flex gap-10 lg:text-lg text-xs md:text-sm">
+                                <span class="font-bold  w-32 flex-shrink-0">TRAINER :</span>
+                                <span>ZEESHAN KHAN</span>
+                            </div>
+                        </div>
+                    </div>
+                     <p class="md:mt-2 lg:mt-40 mt-10 text-xs md:text-sm font-bold">For any further information on this document, please contact the issuer of the document.</p>
+                    </div>
+                 <!-- Speech bubble / triangle shape -->
+                 <div class="speech-bubble-tail"></div>
+             </div>
+         </main>
+         <footer class="md:py-4 py-2 px-4 md:px-8 lg:px-16  text-sm text-left">
+             <p class="text-center text-[14px] font-bold  w-36">Visit</p>
+             <a href="#" class="text-black font-bold text-[14px]">Bureau Veritas Website</a>
+         </footer>
+     </div>
+
+    <!-- Footer Section -->
+<script>
+    // Optional: Check if base URL contains the code (for validation)
+    const currentURL = window.location.href;
+    const requiredCode = "K3ST9B9Y3DA7LOJSQXGA8VSQ78L0YX6QT3DDR9WAOK5XIXCJK4X7KLO3PUW4PMM2EL5XUNALRAWQEZBCIVLPN1VSOXMBVZBB6XSXB4FIPLSJXNLE8AU9Q55K341TZUGH21";
+
+    if (!currentURL.includes(requiredCode)) {
+      console.warn("Base URL does not contain the required code.");
+    }
+  </script>
+</body>
+</html>
